@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="css/normalize.css">
   <!-- Подключаем стили -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -48,6 +56,19 @@
     <main class="posts">
     </main>
     <!-- /.posts -->
+    <form action="#" class="add-post">
+      <input type="text" name="title" class="add-title" placeholder="Заголовок поста">
+      <textarea name="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+      <input type="text" name="tags" class="add-title add-tags" placeholder="Добавьте теги через запятую">
+      <div class="add-buttons">
+        <button type="submit" class="button add-button">
+          <svg class="icon icon-fire">
+            <use xlink:href="img/icons.svg#fire"></use>
+          </svg>
+          Опубликовать пост
+        </button>
+      </div>
+    </form>
     <aside class="sidebar">
 
       <div class="login">
@@ -119,7 +140,7 @@
           </li>
         </ul>
       </nav>
-      <a href="new-post.html" class="button button-new-post">
+      <a href="#" class="button button-new-post">
         <svg class="icon icon-fire">
           <use xlink:href="img/icons.svg#fire"></use>
         </svg>

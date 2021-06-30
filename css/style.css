@@ -96,11 +96,18 @@ body {
 }
 .posts {
   width: 67%;
+  display: none;
 }
+
+.posts.visible{
+  display: block;
+}
+
 .post {
   background-color: #fff;
   border: 1px solid #e8e8e8;
   margin-bottom: 30px;
+  box-sizing: border-box;
 }
 .post-body {
   padding-top: 35px;
@@ -120,16 +127,24 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
+  word-break: break-all;
+  box-sizing: border-box;
 }
 .tags {
+  color: #bfbfbf;
   margin-bottom: 22px;
 }
+
 .tag {
   color: #bfbfbf;
   font-size: 14px;
   line-height: 22px;
-  margin-right: 10px;
+  margin-left: 10px;
   text-decoration: none;
+}
+
+.tag:first-child{
+  margin-left: 0;
 }
 .post-footer {
   border-top: 1px solid #e8e8e8;
@@ -173,6 +188,7 @@ body {
   height: 34px;
   margin-left: 9px;
   border-radius: 4px;
+  object-fit: cover;
 }
 .author-username {
   display: block;
@@ -467,9 +483,15 @@ body {
   color: #ffffff;
 }
 .add-post {
-  display: flex;
+  display: none;
   flex-direction: column;
+  width: 67%;
 }
+
+.add-post.visible {
+  display: flex;
+}
+
 .add-title,
 .add-text {
   background: #ffffff;
@@ -479,6 +501,7 @@ body {
 }
 .add-text {
   min-height: 362px;
+  resize: none;
 }
 .add-button {
   width: 100%;
@@ -536,6 +559,11 @@ body {
   .posts {
     width: 100%;
   }
+
+  .add-post{
+    width: 100%;
+  }
+
   .header-nav {
     display: none;
   }
